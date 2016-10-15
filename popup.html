@@ -7,35 +7,28 @@
 <html>
   <head>
     <title>HackBrexit What The Fact</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" title="" type="text/css">
+
     <script src="popup.js"></script>
-    <style>
-body {
-  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-  font-size: 100%;
-}
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-      }
-    </style>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-    -->
-    <h1>What The Fact</h1>
-    <button id="checkPage">Check this page now!</button>
-
   </head>
   <body>
-    <!-- <button id="selectText">Select text</button> -->
-    <!-- <div id="status"></div> -->
-    <!-- <img id="image-result" hidden> -->
+
+    <div class="module">
+      <header>
+        <h1>What The Fact</h1>
+
+        <p id="selectedText"></p>
+
+        <textarea id="question" rows="3" cols="50" class="questionable_question field" name="question" placeholder="Questionable Question" required="required"></textarea>
+        <input id="email" class="email_address field" name="email" type="email" placeholder="Email" required="required">
+
+
+        <button id="checkPage" type="submit" class="btn btn-default submit"><span>Check this page now</span></button>
+
+      </header>
+    </div>
+
   </body>
 </html>
 

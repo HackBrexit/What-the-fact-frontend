@@ -1,0 +1,68 @@
+.module {
+  background: url("./wtf_back.jpg");
+  background-size:contain;
+  width: 450px;
+  height: 750px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.module > header > h1 {
+  margin: 50px;
+  color: white;
+  text-shadow: 0 1px 0 black;
+}
+
+.module > header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+  text-align:center;
+}
+
+#selectedText {
+  color: white;
+  padding: 20px;
+  border: solid 1pxj
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.73);
+}
+
+.field {
+  margin: 0 15px 10px 0;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.btn {
+  background-color: #00a651;
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin: 50px
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100%;
+  background: black;
+}
+#status {
+  /* avoid an excessively wide status text */
+  white-space: pre;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 400px;
+}
