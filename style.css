@@ -13,6 +13,9 @@ body {
   overflow: hidden;
   border-radius: 10px;
 }
+.header {
+  position: relative;
+}
 
 .module > header > h1 {
   margin: 50px;
@@ -58,7 +61,7 @@ body {
 }
 
 .btn {
-  background-color: #3e913b;
+  background-color: #8db299;
   color: white;
   padding: 6px 12px;
   font-size: 14px;
@@ -70,6 +73,16 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.btn:hover {
+  background-color: #3e913b;
+  cursor: pointer;
+}
+.btn:active, .btn:focus {
+  background-color: white;
+  color: #3e913b;
+  border: 1px solid #3e913b;
 }
 
 #status {
@@ -98,4 +111,29 @@ blockquote:before {
 
 blockquote p {
   display: inline;
+}
+
+.close {
+  display: inline-block;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  border-radius: 20px;
+  background-color: #688897;
+}
+
+.close:hover {
+  background-color: #4d6a79;
+  cursor: pointer;
+}
+
+.close span {
+  display: block;
+  color: #ebeff1;
+  font-size: small;
+  padding-top: 1px;
 }

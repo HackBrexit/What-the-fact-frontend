@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('selectedText').innerHTML = selectedText;
   });
 
+  var closeApp = document.getElementById('close-app');
+  closeApp.addEventListener('click',function(){
+    window.close();
+  });
+
   var checkPageButton = document.getElementById('checkPage');
   checkPageButton.addEventListener('click', function() {
 
