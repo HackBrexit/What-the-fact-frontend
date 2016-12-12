@@ -1,13 +1,14 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Georgia, sans-serif;
   font-size: 100%;
   background: #f6f6f6;
+  color: black;
 }
 
 .module {
-  background-color: #859ca6;
+  background-color: white;
   background-size:contain;
-  width: 450px;
+  width: 350px;
   min-height: 550px;
   position: relative;
   overflow: hidden;
@@ -17,9 +18,12 @@ body {
   position: relative;
 }
 
-.module > header > h1 {
-  margin: 50px;
-  color: white;
+.module > header > h1 { 
+  word-spacing: -0.2em;
+}
+
+.header-logo {
+  width: 2.4em;
 }
 
 .module > header {
@@ -28,14 +32,16 @@ body {
 }
 
 .fields {
-  margin: 20px 20px 220px 20px;
+  margin: 20px 20px 140px 20px;
+}
+
+.selected-text {
+  padding: 20px;
+  font-family: monospace;
 }
 
 #selectedText {
-  color: black;
-  padding: 20px;
-  background: rgba(77, 106, 121, 0.73);
-  font-family: monospace;
+  background-color: #ccc;
 }
 
 .field {
@@ -50,8 +56,14 @@ body {
   margin-left: 15px;
 }
 
+.fields > p {
+  margin: 30px 0 10px 0;
+  padding: 10px 0 5px 0;
+  border-top: 2px dotted #ccc;
+}
+
 .questionable_question {
-  margin-top: 20px;
+  background-color: #f0f0f0;
 }
 
 .email_address {
@@ -61,14 +73,12 @@ body {
 }
 
 .btn {
-  background-color: #8db299;
-  color: white;
-  padding: 6px 12px;
+  background-color: #edea1c;
+  padding: 12px 16px ;
   font-size: 14px;
   line-height: 1.42857143;
   text-align: center;
   border: 1px solid transparent;
-  border-radius: 4px;
   clear: left;
   display: block;
   margin-left: auto;
@@ -76,13 +86,13 @@ body {
 }
 
 .btn:hover {
-  background-color: #3e913b;
+  background-color: #edc21d;
   cursor: pointer;
 }
 .btn:active, .btn:focus {
   background-color: white;
-  color: #3e913b;
   border: 1px solid #3e913b;
+  color: #3e913b;
 }
 
 #status {
@@ -94,19 +104,21 @@ body {
 }
 
 blockquote {
-  border-left: 10px solid #4d6a79;
+  quotes: "\201C""\201D""\2018""\2019";
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
 }
 
 blockquote:before {
-  font-family: 'Montserrat', sans-serif;
+  color: #ccc;
   content: open-quote;
-  font-size: 3em;
+  font-size: 4em;
   line-height: 0.1em;
   margin-right: 0.25em;
   vertical-align: -0.4em;
+  font-family: Georgia, sans-serif;
 }
 
 blockquote p {
@@ -123,17 +135,17 @@ blockquote p {
   top: 10px;
   right: 20px;
   border-radius: 20px;
-  background-color: #688897;
+  background-color: #ccc;
 }
 
 .close:hover {
-  background-color: #4d6a79;
+  background-color: #868686;
   cursor: pointer;
 }
 
 .close span {
   display: block;
-  color: #ebeff1;
+  color: white;
   font-size: small;
   padding-top: 1px;
 }
