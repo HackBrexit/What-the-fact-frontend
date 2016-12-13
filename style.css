@@ -41,7 +41,7 @@ body {
 }
 
 #selectedText {
-  background-color: #ccc;
+  background-color: #fff300;
 }
 
 .field {
@@ -73,7 +73,7 @@ body {
 }
 
 .btn {
-  background-color: #edea1c;
+  background-color: #fff300;
   padding: 12px 16px ;
   font-size: 14px;
   line-height: 1.42857143;
@@ -86,9 +86,10 @@ body {
 }
 
 .btn:hover {
-  background-color: #edc21d;
+  background-color: #ffa200;
   cursor: pointer;
 }
+
 .btn:active, .btn:focus {
   background-color: white;
   border: 1px solid #3e913b;
@@ -111,16 +112,30 @@ blockquote {
   padding: 0.5em 10px;
 }
 
-blockquote:before {
+blockquote:before,
+blockquote:after {
   color: #ccc;
-  content: open-quote;
   font-size: 4em;
   line-height: 0.1em;
   margin-right: 0.25em;
-  vertical-align: -0.4em;
   font-family: Georgia, sans-serif;
+  position: relative;
 }
 
+blockquote:before {
+  content: open-quote;
+  float: left;
+  top: 12px;
+}
+
+blockquote:after {
+  content: close-quote;
+  float: right;
+  bottom: -30px;
+}
+
+blockquote p {
+  display: inline;
 }
 
 .close {
@@ -147,3 +162,17 @@ blockquote:before {
   font-size: small;
   padding-top: 1px;
 }
+
+#end {
+  margin-top: 40px;
+  display: none;
+}
+
+#submitFields {
+  display: none;
+}
+
+#startApp .selected-text {
+  margin-top: 60px;
+}
+
