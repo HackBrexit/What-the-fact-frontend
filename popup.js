@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
   var address = "http://localhost:4567/api/v1/facts";
-  var random_id = (Math.floor(Math.random() * (1000 - 1 + 1)) + 1).toString();
   var selectedText = "";
  
    
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-
   var closeApp = document.getElementById('close-app');
   closeApp.addEventListener('click',function(){
     window.close();
@@ -42,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
         user_email: user_email,
         user_question: user_question,
         questionable_fact: selectedText,
-        fact_id: random_id
       };
 
       var xhttp = new XMLHttpRequest();
