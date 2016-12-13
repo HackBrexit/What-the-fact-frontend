@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       document.getElementById('startApp').style.display = "none";
       document.getElementById('submitFields').style.display = "block";
+      window.scrollTo(0, document.body.scrollHeight);
     }
   });
 
