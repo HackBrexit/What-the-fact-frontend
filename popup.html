@@ -9,23 +9,41 @@
     <title>HackBrexit What The Fact</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" title="" type="text/css">
-
     <script src="popup.js"></script>
   </head>
   <body>
 
     <div class="module">
       <header>
+        <img class="header-logo" src="logo.png" alt="what the fact logo" aria-hidden="true">
         <h1>What The Fact</h1>
+        <div id="close-app" class="close"><span aria-label="close">x</span></div>
+        
+        <div id="startApp">
+          <blockquote class="selected-text">
+            <p>Highlight a questionable "fact" online to request it be checked for accuracy</p>
+          </blockquote>
+        </div>
 
-        <p id="selectedText"></p>
+        <div id="submitFields">
+          <blockquote class="selected-text"><p id="selectedText"></p></blockquote>
+          <div class="fields">
+            <p>What do you want to know about this claim?</p>
+            <textarea id="question" rows="3" cols="35" class="questionable_question field" name="question" placeholder="Question" required="required"></textarea>
+            <input id="user_email" class="email_address field" name="email" type="email" placeholder="Email">
+          </div>
 
-        <textarea id="question" rows="3" cols="50" class="questionable_question field" name="question" placeholder="Questionable Question" required="required"></textarea>
-        <input id="user_email" class="email_address field" name="email" type="email" placeholder="Email"></>
+          <button id="checkPage" type="submit" class="btn btn-default submit">
+            <span>Request fact check</span>
+          </button>
+        </div>
 
-
-        <button id="checkPage" type="submit" class="btn btn-default submit"><span>Check this page now</span></button>
-
+        <div id="end">
+          <p>Thanks for flagging this "fact" for us to check</p> 
+          <blockquote class="selected-text">
+            <p>Highlight another questionable "fact" online to request it be checked for accuracy</p>
+          </blockquote>
+        </div>
       </header>
     </div>
 

@@ -1,64 +1,102 @@
+body {
+  font-family: Georgia, sans-serif;
+  font-size: 100%;
+  background: #f6f6f6;
+  color: black;
+}
+
 .module {
-  background: url("./wtf_back.jpg");
+  background-color: white;
   background-size:contain;
-  width: 450px;
-  height: 750px;
+  width: 350px;
+  min-height: 550px;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
 }
 
-.module > header > h1 {
-  margin: 50px;
-  color: white;
-  text-shadow: 0 1px 0 black;
+.header {
+  position: relative;
+}
+
+.module > header > h1 { 
+  word-spacing: -0.2em;
+}
+
+.header-logo {
+  width: 2.4em;
 }
 
 .module > header {
-  position: absolute;
-  left: 0;
-  width: 100%;
   padding: 20px 10px;
-  text-align:center;
+  text-align: center;
+}
+
+.fields {
+  margin: 20px 20px 140px 20px;
+}
+
+.selected-text {
+  padding: 20px;
+  font-family: monospace;
 }
 
 #selectedText {
-  color: white;
-  padding: 20px;
-  border: solid 1pxj
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.73);
+  background-color: #fff300;
 }
 
 .field {
-  margin: 0 15px 10px 0;
-  padding: 6px 12px;
   line-height: 1.42857143;
+  padding: 6px 12px; 
   color: #555;
   background-color: #fff;
-  background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  float: left;
+  margin-left: 15px;
+}
+
+.fields > p {
+  margin: 30px 0 10px 0;
+  padding: 10px 0 5px 0;
+  border-top: 2px dotted #ccc;
+}
+
+.questionable_question {
+  background-color: #f0f0f0;
+}
+
+.email_address {
+  float: left;
+  margin-top: 10px;
+  display: block;
 }
 
 .btn {
-  background-color: #00a651;
-  color: white;
-  padding: 6px 12px;
+  background-color: #fff300;
+  padding: 12px 16px ;
   font-size: 14px;
   line-height: 1.42857143;
   text-align: center;
   border: 1px solid transparent;
-  border-radius: 4px;
-  margin: 50px
+  clear: left;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 100%;
-  background: black;
+.btn:hover {
+  background-color: #ffa200;
+  cursor: pointer;
 }
+
+.btn:active, .btn:focus {
+  background-color: white;
+  border: 1px solid #3e913b;
+  color: #3e913b;
+}
+
 #status {
   /* avoid an excessively wide status text */
   white-space: pre;
@@ -66,3 +104,76 @@ body {
   overflow: hidden;
   max-width: 400px;
 }
+
+blockquote {
+  quotes: "\201C""\201D""\2018""\2019";
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+blockquote:before,
+blockquote:after {
+  color: #ccc;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  font-family: Georgia, sans-serif;
+  position: relative;
+}
+
+blockquote:before {
+  content: open-quote;
+  float: left;
+  top: 12px;
+}
+
+blockquote:after {
+  content: close-quote;
+  float: right;
+  bottom: -30px;
+}
+
+blockquote p {
+  display: inline;
+}
+
+.close {
+  display: inline-block;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  border-radius: 20px;
+  background-color: #ccc;
+}
+
+.close:hover {
+  background-color: #868686;
+  cursor: pointer;
+}
+
+.close span {
+  display: block;
+  color: white;
+  font-size: small;
+  padding-top: 1px;
+}
+
+#end {
+  margin-top: 40px;
+  display: none;
+}
+
+#submitFields {
+  display: none;
+}
+
+#startApp .selected-text {
+  margin-top: 60px;
+}
+
