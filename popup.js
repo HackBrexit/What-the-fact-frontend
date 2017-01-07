@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var address = "http://localhost:4567/api/v1/facts";
+  var address = "http://178.62.41.106:8000/api/";
   var selectedText = "";
  
-   
   chrome.tabs.executeScript( {
     code: "window.getSelection().toString();"
   }, function(selection) {
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
      var text = document.getElementById('selectedText').innerHTML;
     if (text.length == 0) {
-      console.log("bob" +text.length);
       document.getElementById('submitFields').style.display = "none";
     } else {
       document.getElementById('startApp').style.display = "none";
@@ -19,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
       window.scrollTo(0, document.body.scrollHeight);
     }
   });
-
 
   var closeApp = document.getElementById('close-app');
   closeApp.addEventListener('click',function(){
@@ -34,20 +31,19 @@ document.addEventListener('DOMContentLoaded', function() {
       var user_question = document.getElementById('question').value;
       var user_email = document.getElementById('user_email').value;
 
-
       var data = {
         questionable_fact_url: tab.url,
         user_email: user_email,
         user_question: user_question,
-        questionable_fact: selectedText,
+        questionable_fact: selectedText
       };
 
-      var xhttp = new XMLHttpRequest();
+     var xhttp = new XMLHttpRequest();
       xhttp.open("POST", address, true);
       xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
       xhttp.send(JSON.stringify(data));
     }); 
+    
     document.getElementById('submitFields').style.display = "none";
     document.getElementById('end').style.display = "block";
   }, false);
