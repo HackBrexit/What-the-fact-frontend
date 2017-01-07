@@ -31,19 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
       var user_question = document.getElementById('question').value;
       var user_email = document.getElementById('user_email').value;
 
-      var data = {
-        questionable_fact_url: tab.url,
-        user_email: user_email,
-        user_question: user_question,
-        questionable_fact: selectedText
-      };
-
-     var xhttp = new XMLHttpRequest();
-      xhttp.open("POST", address, true);
-      xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-      xhttp.send(JSON.stringify(data));
-    }); 
+      var data = "user_question="+user_question+"&user_email="+user_email+"&questionable_fact="+selectedText+"&questionable_fact_url="+tab.url;
     
+      var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", address, true);
+        xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhttp.send(data); 
+      });
+
     document.getElementById('submitFields').style.display = "none";
     document.getElementById('end').style.display = "block";
   }, false);
