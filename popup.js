@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var address = "http://178.62.41.106:8000/api/";
+  var address = "http://138.68.148.244:8000/api/";
   var selectedText = "";
  
   chrome.tabs.executeScript( {
